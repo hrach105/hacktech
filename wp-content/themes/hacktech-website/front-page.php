@@ -7,7 +7,7 @@
             <div class="page-wrapper">
                 <div class="main-content">
                     <div class="banner">
-                           <img src="<?php the_field('banner_image') ?>" class="banner-image" alt="hacktech banner">
+                           <img src="<?php the_field('banner_image') ?>" class="banner-image" alt="gohacktech.com banner">
                            <div class="services">
                                <?php if( have_rows('services') ): ?>
                                    <div class="wrapper">
@@ -17,7 +17,7 @@
                                            $desc = get_sub_field('desc');
                                            ?>
                                            <div class="wrapper-item">
-                                               <img src="<?= $icon ?>" alt="">
+                                               <img src="<?= $icon ?>" alt="gohacktech.com services">
                                                <div>
                                                    <p><?= $title ?></p>
                                                    <span><?= $desc  ?></span>
@@ -108,7 +108,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="37" height="28" viewBox="0 0 37 28" fill="none">
                                         <path d="M1.5905 14.6512L11.1335 0H17.7466L11.7195 12.3721C13.1146 12.9147 14.2866 13.8915 15.2353 15.3023C16.2398 16.6589 16.7421 18.1783 16.7421 19.8605C16.7421 22.1395 15.9329 24.0659 14.3145 25.6395C12.6961 27.2132 10.7149 28 8.37104 28C6.02715 28 4.046 27.2132 2.4276 25.6395C0.809201 24.0659 0 22.1395 0 19.8605C0 18.0698 0.530166 16.3333 1.5905 14.6512ZM20.8439 14.6512L30.3869 0H37L30.9728 12.3721C32.368 12.9147 33.54 13.8915 34.4887 15.3023C35.4932 16.6589 35.9955 18.1783 35.9955 19.8605C35.9955 22.1395 35.1863 24.0659 33.5679 25.6395C31.9495 27.2132 29.9683 28 27.6244 28C25.2805 28 23.2994 27.2132 21.681 25.6395C20.0626 24.0659 19.2534 22.1395 19.2534 19.8605C19.2534 18.0698 19.7836 16.3333 20.8439 14.6512Z" fill="#4669D1"/>
                                     </svg>
-                                    <img src="<?= $testimonial_image ?>" alt="hacktech testimonials">
+                                    <img src="<?= $testimonial_image ?>" alt="gohacktech.com testimonials">
                                 </div>
                                 <div>
                                     <p><?= $testimonial_description ?></p>
@@ -149,7 +149,7 @@
                                             ?>
                                             <li>
                                                 <a href="<?= $social_link ?>">
-                                                    <img src="<?= $social_icon ?>" alt="hackech socials">
+                                                    <img src="<?= $social_icon ?>" alt="gohacktech.com socials">
                                                 </a>
                                             </li>
                                         <?php endwhile; ?>
@@ -164,14 +164,14 @@
                         <div class="contact-us-banner-content">
                             <h3><?php the_field('contact_us_title') ?></h3>
                             <p><?php the_field('contact_us_description') ?></p>
-                            <button><?php the_field('contact_us_button') ?></button>
+                            <a href="#"><?php the_field('contact_us_button') ?></a>
                         </div>
                     </div>
                     <div class="links-block">
                         <?php
-                        wp_nav_menu(array(
-                            'theme_location' => 'links',
-                        ));
+                            wp_nav_menu(array(
+                                'theme_location' => 'links',
+                            ));
                         ?>
                     </div>
                 </div>
@@ -192,12 +192,12 @@
 
                        <?php    while ($query->have_posts()) : $query->the_post(); ?>
                            <div class="post-item">
-                               <img src="<?php the_field('article_image'); ?>" alt="">
+                               <img src="<?php the_field('article_image'); ?>" alt="gohacktech.com posts">
                                <div class="post-item-titles">
                                    <p><?php the_field('post_title'); ?></p>
                                    <span><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
                                </div>
-                               <a href="#">
+                               <a href="#" rel="nofollow">
                                    Read More
                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12" fill="none">
                                        <g clip-path="url(#clip0_2_319)">

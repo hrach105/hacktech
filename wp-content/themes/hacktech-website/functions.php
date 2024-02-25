@@ -202,6 +202,7 @@ function theme_register_menus() {
     register_nav_menus(
         array(
             'links' => esc_html__( 'Links Menu' ),
+            'header' => esc_html__( 'Header Menu' ), // Combined with the first call
         )
     );
 }
